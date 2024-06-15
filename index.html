@@ -56,10 +56,6 @@
             transition: transform 0.3s;
         }
 
-        ul li:hover {
-            transform: scale(1.05);
-        }
-
         ul li a {
             color: rgb(174, 174, 20);
             text-decoration: none;
@@ -69,15 +65,6 @@
             transition: color 0.5s, background 0.5s;
             position: relative;
             z-index: 1;
-        }
-
-        ul:hover li a {
-            color: #0002;
-        }
-
-        ul li:hover a {
-            color: #ffffff;
-            background: transparent;
         }
 
         ul li a:before {
@@ -100,14 +87,7 @@
             transition: letter-spacing 0.5s, left 0.5s;
         }
 
-        ul li a:hover:before {
-            content: attr(data-text);
-            opacity: 1;
-            left: 50%;
-            letter-spacing: 10px;
-            width: 1800px;
-            height: 1800px;
-        }
+
 
         @media (max-width: 768px) {
             ul li a {
