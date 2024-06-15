@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamy Decor</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            background: #dcd9cd;
+            padding: 20px;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/LOGO.jpg') no-repeat center center/cover;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        ul li {
+            list-style: none;
+            text-align: center;
+            border: 2px solid rgb(174, 174, 20);
+            border-radius: 8px;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+
+        ul li:hover {
+            transform: scale(1.05);
+        }
+
+        ul li a {
+            color: rgb(174, 174, 20);
+            text-decoration: none;
+            font-size: 1.5em;
+            display: inline-block;
+            font-weight: 700;
+            transition: color 0.5s, background 0.5s;
+            position: relative;
+            z-index: 1;
+        }
+
+        ul:hover li a {
+            color: #0002;
+        }
+
+        ul li:hover a {
+            color: #ffffff;
+            background: transparent;
+        }
+
+        ul li a:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.75em;
+            color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 500px;
+            transition: letter-spacing 0.5s, left 0.5s;
+        }
+
+        ul li a:hover:before {
+            content: attr(data-text);
+            opacity: 1;
+            left: 50%;
+            letter-spacing: 10px;
+            width: 1800px;
+            height: 1800px;
+        }
+
+        @media (max-width: 768px) {
+            ul li a {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            ul li a {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a target="_blank" href="/pdf/dasma2.pdf">Dasma</a></li>
+        <li><a target="_blank" href="/pdf/fejesa2.pdf">Fejesa</a></li>
+        <li><a target="_blank" href="/pdf/brite2.pdf">Bride to be</a></li>
+        <li><a target="_blank" href="/pdf/comp_compressed.pdf">Company</a></li>
+        <li><a target="_blank" href="/pdf/dtl2.pdf">Ditelindje</a></li>
+        <li><a target="_blank" href="/pdf/gender2.pdf">Gender Reveal</a></li>
+        <li><a target="_blank" href="/pdf/sur2.pdf">Surpriza</a></li>
+    </ul>
+</body>
+
+</html>
